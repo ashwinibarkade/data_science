@@ -137,8 +137,8 @@ plt.show()
 
 """
 
-""" data selection in pandas"""
-
+""" data selection in pandas
+#https://www.youtube.com/watch?v=eM7p3MVLOZ8&list=PLA83b1JHN4ly2mOHrBZUUyRyhr8fO0p6l&index=9
 df = pd.read_csv("train.csv")
 print(df.head(5))
 
@@ -155,3 +155,21 @@ print(df.iloc[3:5])
 #select few cells..same iloc function with first element --> row number, comma seperated by column index
 #example - rows - 0 to 4 cell number - 3
 print(df.iloc[0:5,3])
+"""
+
+""" Conditional selection of data """
+#https://www.youtube.com/watch?v=eM7p3MVLOZ8&list=PLA83b1JHN4ly2mOHrBZUUyRyhr8fO0p6l&index=10
+df = pd.read_csv("train.csv")
+print(df.head(5))
+
+#print records with Fair > 10
+print(df[df['Fare'] > 10])
+
+#print records with Fair > 10 with only oclumn -- 'Fare'
+print(df[df['Fare'] > 10]['Fare'])
+
+#gender wise filter
+print(df[df['Sex'] == 'male']['Sex'])
+
+#negation in filter
+print(df[df['Sex'] != 'male']['Sex'])
