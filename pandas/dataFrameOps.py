@@ -6,7 +6,7 @@ from matplotlib import style
 
 
 """ Data Reader - read from external source - Web"""
-"""
+
 start = datetime.datetime(2015,1,1)
 end = datetime.datetime(2015,12,31)
 
@@ -22,10 +22,10 @@ style.use('seaborn-poster')
 
 df.plot()
 plt.show()
-"""
+
 
 """ CREATE DF from dictionary"""
-"""
+
 records_dict = {'name':['ashwini','aarti','shweta','shilpa' ],
                 'surname':['barkade','verma','kalalabandi','math'],
                 'roll_no':[50,60,70,80]}
@@ -43,18 +43,18 @@ plt.show()
 print(records_df.head(2))
 print(records_df.tail(2))
 
-"""
 
-""" PANDAS I/O
+
+""" PANDAS I/O """
 
 boston_df = pd.read_csv("boston.csv")
 print(boston_df.head())
 
 boston_df.to_json("boston.json")
 boston_df.to_html("boston.html")
-"""
 
-""" Add delete columns  
+
+""" Add delete columns """
 
 lst = [1,2,3,4,5,6]
 lst_dataframe = pd.DataFrame(lst)
@@ -66,9 +66,9 @@ lst_dataframe.index = [5,4,3,2,1,0]
 print(lst_dataframe)
 print(lst_dataframe.columns)
 
-"""
 
-""" df properties
+
+""" df properties """
 
 train_df = pd.read_csv("train.csv")
 print(train_df.dtypes)
@@ -77,7 +77,7 @@ print(train_df.head())
 print(train_df.describe())
 print(train_df.info())
 
-"""
+
 
 """ convert category variable to continous variable"""
 
@@ -90,8 +90,12 @@ stat_df = pd.DataFrame(stat_dict)
 mark_col = stat_df['marks']
 print(mark_col)
 
+
+""" Method1: Finding unique values from column"""
 mark_unique = set(mark_col)
 #print(mark_unique)
+
+#mark_uniquw also can be converted to array
 
 mapping_dict = {}
 num = 0;
@@ -107,3 +111,20 @@ def convert(x):
 stat_df['marks_cont'] = stat_df['marks'].apply(convert)
 
 print(stat_df)
+
+"""Method2: Finding unique values in column"""
+makr_unique1 = stat_df['marks'].unique()
+
+print(makr_unique1)
+
+
+"""Calculating moving average of time series data"""
+
+data1 = {'data':[1,2,3,4,5,6,7,8,9]}
+
+df = pd.DataFrame(data1)
+
+#use rolling function to mention number of element and then mention which method you would like to call on that
+rolling_df = df.rolling(2).mean()
+
+print(rolling_df)
