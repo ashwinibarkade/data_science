@@ -173,3 +173,5 @@ print(df[df['Sex'] == 'male']['Sex'])
 
 #negation in filter
 print(df[df['Sex'] != 'male']['Sex'])
+
+#filter missing data
