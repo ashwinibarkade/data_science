@@ -1,18 +1,20 @@
+#https://www.youtube.com/watch?v=wUuILD-3VJU&index=11&list=PLA83b1JHN4ly2mOHrBZUUyRyhr8fO0p6l
+
 import pandas as pd
 import numpy as np
 
 """LOW LEVEL DROPPING OF INCOMPLETE DATA"""
 
-""" dropnam for pandas series
+""" dropnam for pandas series """
 #create pandas Series
 Data = pd.Series([1,np.NaN,4,5,np.NaN,6])
 print(Data)
 #clear missing ie NAN data
 Data.dropna(inplace=True)
 print(Data)
-"""
 
-"""dropna for DataFrame
+
+"""dropna for DataFrame """
 #dropna on DataFrame
 data1 = pd.DataFrame([[5,2.8,9],[1.5,np.NaN,np.NaN],[np.NaN,np.NaN,np.NaN],[np.NaN,6.2,23],[1,2,3]])
 print(data1)
@@ -20,17 +22,17 @@ print(data1)
 data1.dropna(inplace=True)
 print("data1 after dropping the NaN:")
 print(data1)
-"""
 
 
-"""Conditional drop. Drop only if all entries in row are NaN
+
+"""Conditional drop. Drop only if all entries in row are NaN """
 data2 = pd.DataFrame([[5,2.8,9],[1.5,np.NaN,np.NaN],[np.NaN,np.NaN,np.NaN],[np.NaN,6.2,23],[1,2,3]])
 data2.dropna(inplace=True,how='all')
 print(data2)
-"""
 
 
-"""COLUMN LEVEL DROPPING OF INCOMPLETE DATA
+
+"""COLUMN LEVEL DROPPING OF INCOMPLETE DATA """
 
 data3 = pd.DataFrame([[5,2.8,9],[1.5,np.NaN,np.NaN],[np.NaN,np.NaN,np.NaN],[np.NaN,6.2,23],[1,2,3]])
 print(data3)
@@ -45,7 +47,7 @@ print(data4)
 #delete the column only if all the values are NaN
 data4.dropna(axis=1,inplace=True,how='all')
 print(data4)
-"""
+
 
 
 """FILTER BASED ON THRESHOLD ie keeping values based on filter"""

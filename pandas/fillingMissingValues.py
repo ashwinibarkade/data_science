@@ -1,3 +1,4 @@
+#https://www.youtube.com/watch?v=_bl9fogd05c&index=12&list=PLA83b1JHN4ly2mOHrBZUUyRyhr8fO0p6l
 import numpy as np
 import pandas as pd
 
