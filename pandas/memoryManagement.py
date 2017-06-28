@@ -22,7 +22,7 @@ differently for these diff types.
 a = 1
 b = 2
 
-two diff variabels are created.
+two diff variables are created.
  
 2. In python variables are more like tags, so when we assign a value to variable,
     c = 10
