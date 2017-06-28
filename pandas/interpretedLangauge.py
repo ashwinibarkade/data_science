@@ -22,7 +22,7 @@ The Python interpreter’s job is to make sense of the bytecode via the virtual 
 
 Article reference:
 http://akaptur.com/blog/2013/12/03/introduction-to-the-python-interpreter-4/
-
+http://www.techdarting.com/2014/04/python-compiled-or-interpreted-language.html
 
 
 DYNAMIC TYPING
